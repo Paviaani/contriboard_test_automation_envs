@@ -1,7 +1,7 @@
 VAGRANT_API_VERSION = "2"
 
 Vagrant.configure(VAGRANT_API_VERSION) do |config|
-	config.vm.box = "Ubuntu-14.04_64-Desktop"
+	config.vm.box = "n4sjamk/bareubuntu"
 
 	config.vm.provider "virtualbox" do |v|
 		v.cpus   = 2
