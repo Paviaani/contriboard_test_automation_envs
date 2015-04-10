@@ -45,5 +45,5 @@ vagrant up
 
 ###Tests
 
-Run tests from "runtests" folder using ```pybot``` command
+Run tests from ```runtests``` folder using ```pybot``` command
 
