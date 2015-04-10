@@ -1,0 +1,17 @@
+VAGRANT_API_VERSION = "2"
+
+Vagrant.configure(VAGRANT_API_VERSION) do |config|
+	config.vm.box = "Ubuntu-14.04_64-Desktop"
+
+	config.vm.provider "virtualbox" do |v|
+		v.cpus   = 2
+		v.memory = 1024
+		v.gui = true
+	end
+
+	config.vm.provision :shell, :path => "bootstrap.sh"
+
+
+	config.vm.synced_folder "test",           "/home/vagrant/teamboard-test"
+
+end
