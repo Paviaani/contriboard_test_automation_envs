@@ -43,4 +43,7 @@ sh initialize-https.sh
 vagrant up
 ```
 
+###Tests
+
+Run tests from "runtests" folder using ```pybot``` command
 
