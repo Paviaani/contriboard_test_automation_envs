@@ -10,10 +10,10 @@ Add box to vagrant
 $ vagrant box add Ubuntu-14.04_64-Desktop package.box
 ``` 
 
-Clone test repo from git
+Clone test enviroments repo from git
 
 ```
-git clone test-repo
+git clone https://github.com/N4SJAMK/contriboard_test_automation_envs.git
 ```
 
 ####Initialize workspace
