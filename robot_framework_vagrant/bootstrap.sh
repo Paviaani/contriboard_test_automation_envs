@@ -24,5 +24,5 @@ sudo chmod -R 777 /home/vagrant/runtests
 
 # Install RIDE(Test Editor)
 #sudo apt-get -y install python-wxgtk2.8
-#pip install robotframework-ride
+#sudo pip install robotframework-ride
 #ride.py
