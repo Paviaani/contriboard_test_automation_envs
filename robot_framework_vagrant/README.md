@@ -2,14 +2,6 @@
   
 ###Fast Guide
 
-Download vagrant box "Ubuntu-14.04_64-Desktop"
-
-Add box to vagrant
-
-```
-$ vagrant box add Ubuntu-14.04_64-Desktop package.box
-``` 
-
 Clone test enviroments repo from git
 
 ```
