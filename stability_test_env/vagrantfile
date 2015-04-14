@@ -21,4 +21,5 @@ Vagrant.configure(VAGRANT_API_VERSION) do |config|
 	#config.vm.synced_folder "client",       "/home/vagrant/teamboard-client"
 	config.vm.synced_folder "client-react", "/home/vagrant/teamboard-client-react"
 	config.vm.synced_folder "populator", 	"/home/vagrant/contriboard-populator"
+	config.vm.synced_folder "stats", 	"/home/vagrant/stats"
 end
