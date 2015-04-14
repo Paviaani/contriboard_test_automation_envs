@@ -8,7 +8,7 @@ Clone test enviroments repo from git
 git clone https://github.com/N4SJAMK/contriboard_test_automation_envs.git
 ```
 
-####Initialize workspace
+####1.Initialize workspace
 Go to stability_test_env folder inside cloned repo.
 
 ```
@@ -37,7 +37,7 @@ If you have still problems you should try to do just a cloning repository!
 sh initialize-https.sh
 ```
 
-####Start Contriboard
+####2. Start Contriboard
 
 Start your Contriboard
 
@@ -45,9 +45,13 @@ Start your Contriboard
 vagrant up
 ```
 
-####Run stability test
+####3. Start Contriboard services
 
-Start stability test
+Start Contriboard services as instructed [here](https://github.com/N4SJAMK/teamboard).
+
+####4. Run stability test
+
+Start stability test from ```stability_test_env``` folder.
 
 ```
 sh stability.sh
