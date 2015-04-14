@@ -13,6 +13,7 @@ git clone git@github.com:$USER/teamboard-api.git          api
 git clone git@github.com:$USER/teamboard-client-react.git client-react
 git clone git@github.com/$USER/contriboard-populator.git 	populator
 git clone git@github.com/N4SJAMK/teamboard-test.git 	test
+mkdir stats
 
 # Set 'upstream' to the original repository.
 (cd io           && git remote add upstream git@github.com:N4SJAMK/teamboard-io.git)

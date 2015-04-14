@@ -24,8 +24,11 @@ npm install -g gulp bower
 
 # Database populator depencies
 
-sudo apt-get -y install python-pip
+sudo apt-get install -y python-pip
 sudo pip install requests
 sudo pip install loremipsum
 sudo pip install pymongo
 sudo pip install fabric
+
+#dstat for server stats
+sudo apt-get install -y dstat
