@@ -20,7 +20,16 @@ while :
 do
 	cd test/robot-framework/ContriboardTesting/
 	pybot RegTestUsers.txt
-	pybot Login.txt
+	pybot Invalid_Login_Test.txt
+	pybot New_User_Test.txt
+	pybot Old\ User\ Test.txt
+	cd .. && cd ContriboardTestScenarios/
+	pybot RegisterUsers.txt
+	pybot Scenario1.rst
+	pybot Scenario2.rst
+	pybot Scenario3.rst
+	pybot Scenario4.rst
+	pybot Scenario5.rst
 	cd .. && cd .. && cd ..
 	vagrant ssh -c "${CLEARDB}"
 	echo "Press [CTRL+C]to stop..."
