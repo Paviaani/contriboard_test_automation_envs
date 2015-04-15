@@ -9,12 +9,24 @@ CLIENTVERSION="cd /home/vagrant/teamboard-client-react/ && echo Client version: 
 DBVERSION="echo MongoDB version: >> /home/vagrant/stats/version.txt && mongod --version >> /home/vagrant/stats/version.txt"
 SYSINFO="sudo lshw >> /home/vagrant/stats/sysinfo.txt"
 
+echo '\nGet Contriboard API version:'
 vagrant ssh -c "${APIVERSION}"
+echo 'API version at /stats/version.txt\n'
+echo 'Get Contriboard IO version:'
 vagrant ssh -c "${IOVERSION}"
+echo 'IO version at /stats/version.txt\n'
+echo 'Get Contriboard CLIENT version:'
 vagrant ssh -c "${CLIENTVERSION}"
+echo 'CLIENT version at /stats/version.txt\n'
+echo 'Get Contriboard MONGODB version:'
 vagrant ssh -c "${DBVERSION}"
+echo 'MONGODB version at /stats/version.txt\n'
+echo 'Get System info:'
 vagrant ssh -c "${SYSINFO}"
+echo 'System info at /stats/sysinfo.txt\n'
+echo 'Start dstat:'
 vagrant ssh -c "${DSTAT}"
+echo 'dstat running...\n'
 
 while :
 do
@@ -32,6 +44,6 @@ do
 	pybot Scenario5.rst
 	cd .. && cd .. && cd ..
 	vagrant ssh -c "${CLEARDB}"
-	echo "Press [CTRL+C]to stop..."
+	echo 'Press [CTRL+C]to stop...'
 	sleep 1
 done
