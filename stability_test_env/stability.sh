@@ -2,7 +2,7 @@
 #runstuff
 
 CLEARDB="cd contriboard-populator/ && fab clear_database"
-DSTAT="dstat -c -m -r -t --nocolor >> /home/vagrant/stats/dstat.txt &"
+DSTAT="sh /home/vagrant/stats/startdstat.sh"
 APIVERSION="cd /home/vagrant/teamboard-api/ && echo Api version: >> /home/vagrant/stats/version.txt && git describe >> /home/vagrant/stats/version.txt"
 IOVERSION="cd /home/vagrant/teamboard-io/ && echo IO version: >> /home/vagrant/stats/version.txt && git describe >> /home/vagrant/stats/version.txt"
 CLIENTVERSION="cd /home/vagrant/teamboard-client-react/ && echo Client version: >> /home/vagrant/stats/version.txt && git describe >> /home/vagrant/stats/version.txt"
