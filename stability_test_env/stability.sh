@@ -8,7 +8,11 @@ IOVERSION="cd /home/vagrant/teamboard-io/ && echo IO version: >> /home/vagrant/s
 CLIENTVERSION="cd /home/vagrant/teamboard-client-react/ && echo Client version: >> /home/vagrant/stats/version.txt && git describe >> /home/vagrant/stats/version.txt"
 DBVERSION="echo MongoDB version: >> /home/vagrant/stats/version.txt && mongod --version >> /home/vagrant/stats/version.txt"
 SYSINFO="sudo lshw >> /home/vagrant/stats/sysinfo.txt"
+START="sh /home/vagrant/stats/start.sh"
 
+echo '\nStart Contriboard:'
+vagrant ssh -c "${START}"
+echo 'Contriboard runnig...'
 echo '\nGet Contriboard API version:'
 vagrant ssh -c "${APIVERSION}"
 echo 'API version at /stats/version.txt\n'
