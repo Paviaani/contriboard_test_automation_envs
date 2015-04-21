@@ -56,7 +56,14 @@ sh start_contriboard.sh
 
 Start stability test from ```stability_test_env``` folder.
 
+Unlooped test:
 ```
-sh stability.sh
+sh stability_test.sh
 ```
+
+Looped test:
+```
+sh stability_test_loop.sh
+```
+
 
