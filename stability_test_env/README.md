@@ -47,7 +47,10 @@ vagrant up
 
 ####3. Start Contriboard services
 
-Start Contriboard services as instructed [here](https://github.com/N4SJAMK/teamboard).
+Start Contriboard services by running command:
+```
+sh start_contriboard.sh
+```
 
 ####4. Run stability test
 
