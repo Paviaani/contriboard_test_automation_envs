@@ -17,7 +17,7 @@ cd stability_test_env/
 
 Install robot framework to your local machine.
 ```
-sh install_test_env.sh
+sh install_test_depencies.sh
 ```
 
 Initialize by running a initialization commands according you environment:
