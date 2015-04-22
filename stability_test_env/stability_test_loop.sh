@@ -26,7 +26,7 @@ vagrant ssh -c "${SYSINFO}"
 echo 'System info at /stats/sysinfo.txt\n'
 echo 'Start dstat:'
 vagrant ssh -c "${DSTAT}"
-echo 'dstat running...\n'
+echo 'dstat running...\n dstat info at /stats/dstat.txt\n'
 
 while :
 do
@@ -43,7 +43,9 @@ do
 	pybot Scenario4.rst
 	pybot Scenario5.rst
 	cd .. && cd .. && cd ..
+	echo 'Clear Database:'
 	vagrant ssh -c "${CLEARDB}"
+	echo 'Database Cleared.\n'
 	echo 'Press [CTRL+C]to stop...'
 	sleep 1
 done
