@@ -9,6 +9,12 @@ CLIENTVERSION="cd /home/vagrant/teamboard-client-react/ && echo Client version: 
 DBVERSION="echo MongoDB version: >> /home/vagrant/stats/version.txt && mongod --version >> /home/vagrant/stats/version.txt"
 SYSINFO="sudo lshw >> /home/vagrant/stats/sysinfo.txt"
 
+echo 'Get Updated tests:'
+cd test && git pull
+cd ..
+echo 'Clear Database:'
+vagrant ssh -c "${CLEARDB}"
+echo 'Database Cleared.\n'
 echo '\nGet Contriboard API version:'
 vagrant ssh -c "${APIVERSION}"
 echo 'API version at /stats/version.txt\n'
