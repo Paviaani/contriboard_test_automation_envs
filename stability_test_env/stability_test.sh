@@ -49,5 +49,6 @@ pybot Scenario4.rst
 pybot Scenario5.rst
 cd .. && cd .. && cd ..
 echo 'Clear Database:'
+killall firefox
 vagrant ssh -c "${CLEARDB}"
 echo 'Database Cleared.\n'
