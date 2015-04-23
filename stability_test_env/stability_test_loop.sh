@@ -2,7 +2,7 @@
 #runstuff
 
 CLEARDB="cd contriboard-populator/ && fab clear_database"
-DSTAT="sh /home/vagrant/stats/startdstat.sh"
+STATS="sh /home/vagrant/stats/startstats.sh"
 APIVERSION="cd /home/vagrant/teamboard-api/ && echo Api version: >> /home/vagrant/stats/version.txt && git describe >> /home/vagrant/stats/version.txt && echo '\n' >> /home/vagrant/stats/version.txt"
 IOVERSION="cd /home/vagrant/teamboard-io/ && echo IO version: >> /home/vagrant/stats/version.txt && git describe >> /home/vagrant/stats/version.txt && echo '\n' >> /home/vagrant/stats/version.txt"
 CLIENTVERSION="cd /home/vagrant/teamboard-client-react/ && echo Client version: >> /home/vagrant/stats/version.txt && git describe >> /home/vagrant/stats/version.txt && echo '\n' >> /home/vagrant/stats/version.txt"
@@ -31,9 +31,10 @@ echo 'MONGODB version at /stats/version.txt\n'
 echo 'Get System info:'
 vagrant ssh -c "${SYSINFO}"
 echo 'System info at /stats/sysinfo.txt\n'
-echo 'Start dstat:'
-vagrant ssh -c "${DSTAT}"
-echo 'dstat running...\n dstat info at /stats/dstat.txt\n'
+echo 'Start monitorig:'
+vagrant ssh -c "${STATS}"
+echo 'Monitors at /stats/dstat.txt and /stats/process.txt\n'
+
 
 while COUNTER=$((COUNTER+1))
 do
