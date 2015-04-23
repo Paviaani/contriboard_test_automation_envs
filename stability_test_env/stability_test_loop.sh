@@ -54,7 +54,8 @@ do
 	echo 'Clear Database:'
 	vagrant ssh -c "${CLEARDB}"
 	echo 'Database Cleared.\n'
+	killall firefox
 	echo 'Test loop round '$COUNTER' finished:' >> stats/version.txt && date >>  stats/version.txt
 	echo '\nPress [CTRL+C]to stop...'
-	sleep 1
+	sleep 2
 done
