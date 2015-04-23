@@ -3,11 +3,12 @@
 
 CLEARDB="cd contriboard-populator/ && fab clear_database"
 DSTAT="sh /home/vagrant/stats/startdstat.sh"
-APIVERSION="cd /home/vagrant/teamboard-api/ && echo Api version: >> /home/vagrant/stats/version.txt && git describe >> /home/vagrant/stats/version.txt"
-IOVERSION="cd /home/vagrant/teamboard-io/ && echo IO version: >> /home/vagrant/stats/version.txt && git describe >> /home/vagrant/stats/version.txt"
-CLIENTVERSION="cd /home/vagrant/teamboard-client-react/ && echo Client version: >> /home/vagrant/stats/version.txt && git describe >> /home/vagrant/stats/version.txt"
-DBVERSION="echo MongoDB version: >> /home/vagrant/stats/version.txt && mongod --version >> /home/vagrant/stats/version.txt"
+APIVERSION="cd /home/vagrant/teamboard-api/ && echo Api version: >> /home/vagrant/stats/version.txt && git describe >> /home/vagrant/stats/version.txt && echo '\n' >> /home/vagrant/stats/version.txt"
+IOVERSION="cd /home/vagrant/teamboard-io/ && echo IO version: >> /home/vagrant/stats/version.txt && git describe >> /home/vagrant/stats/version.txt && echo '\n' >> /home/vagrant/stats/version.txt"
+CLIENTVERSION="cd /home/vagrant/teamboard-client-react/ && echo Client version: >> /home/vagrant/stats/version.txt && git describe >> /home/vagrant/stats/version.txt && echo '\n' >> /home/vagrant/stats/version.txt"
+DBVERSION="echo MongoDB version: >> /home/vagrant/stats/version.txt && mongod --version >> /home/vagrant/stats/version.txt && echo '\n' >> /home/vagrant/stats/version.txt"
 SYSINFO="sudo lshw >> /home/vagrant/stats/sysinfo.txt"
+COUNTER=0
 
 echo 'Get Updated tests:'
 cd test/ && git pull
@@ -34,8 +35,9 @@ echo 'Start dstat:'
 vagrant ssh -c "${DSTAT}"
 echo 'dstat running...\n dstat info at /stats/dstat.txt\n'
 
-while :
+while COUNTER=$((COUNTER+1))
 do
+	echo '\nTest loop round '$COUNTER' started:' >> stats/version.txt && date >>  stats/version.txt
 	cd test/robot-framework/ContriboardTesting/
 	pybot RegTestUsers.txt
 	pybot Invalid_Login_Test.txt
@@ -53,6 +55,7 @@ do
 	vagrant ssh -c "${CLEARDB}"
 	echo 'Database Cleared.\n'
 	killall firefox
-	echo 'Press [CTRL+C]to stop...'
+	echo 'Test loop round '$COUNTER' finished:' >> stats/version.txt && date >>  stats/version.txt
+	echo '\nPress [CTRL+C]to stop...'
 	sleep 2
 done
