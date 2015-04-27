@@ -8,9 +8,14 @@ IOVERSION="cd /home/vagrant/teamboard-io/ && echo IO version: >> /home/vagrant/s
 CLIENTVERSION="cd /home/vagrant/teamboard-client-react/ && echo Client version: >> /home/vagrant/stats/version.txt && git describe >> /home/vagrant/stats/version.txt && echo '\n' >> /home/vagrant/stats/version.txt"
 DBVERSION="echo MongoDB version: >> /home/vagrant/stats/version.txt && mongod --version >> /home/vagrant/stats/version.txt && echo '\n' >> /home/vagrant/stats/version.txt"
 SYSINFO="sudo lshw >> /home/vagrant/stats/sysinfo.txt"
+SETTIME="sudo ln -sf /usr/share/zoneinfo/Europe/Helsinki /etc/localtime && date"
 COUNTER=0
 
-echo 'Get Updated tests:'
+
+echo 'Set time:'
+vagrant ssh -c "${SETTIME}"
+echo 'Time set...'
+echo '\nGet Updated tests:'
 cd test/ && git pull
 cd ..
 echo '\nClear Database:'
