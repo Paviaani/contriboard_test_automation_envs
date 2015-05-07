@@ -9,7 +9,7 @@ git clone https://github.com/N4SJAMK/contriboard_test_automation_envs.git
 ```
 
 ####Initialize workspace
-Go to robot_framework_vagrant folder inside cloned repo.
+Go to robot_framework_vagrant_headless folder inside cloned repo.
 
 Initialize the workspace by running a initialization commands according you environment:
 
