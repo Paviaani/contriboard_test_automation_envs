@@ -13,5 +13,4 @@ Vagrant.configure(VAGRANT_API_VERSION) do |config|
 	config.vm.network "forwarded_port", guest: 8000,  host:  8000, auto_correct: true
 
 	config.vm.synced_folder "test", 	"/home/vagrant/teamboard-test"
-	config.vm.synced_folder "test_reports", 	"/home/vagrant/test_reports"
 end
