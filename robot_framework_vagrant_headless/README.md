@@ -45,7 +45,7 @@ vagrant ssh
 
 Start vncserver:
 ```
-vncserver :89 -geometry 1920x1080 -depth 24
+vncserver :89 -geometry 1920x1200 -depth 24
 ```
 
 Input password (password lenght:8)
