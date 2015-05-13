@@ -1,4 +1,4 @@
-## Stabilyt test environment
+## Stability test environment
   
 ###Fast Guide
 
@@ -101,4 +101,12 @@ Looped test:
 DISPLAY=:89 sh stability_test_loop.sh
 ```
 
+
+####5. Create graphs from stats
+
+From stats folder run create_graph script
+
+```
+sh create_graph.sh
+```
 
