@@ -54,9 +54,6 @@ sh start_contriboard.sh
 
 ####4. Run stability test
 
-
-### Physical Display
-
 Start stability test from ```stability_test_env``` folder.
 
 Unlooped test:
@@ -69,36 +66,11 @@ Looped test:
 sh stability_test_loop.sh
 ```
 
-### Virtual Display
+####5. Create graphs from stats
 
-Install vnc4server
-```
-sudo apt-get install vnc4server
-```
+From stats folder run create_graph script
 
-Start vncserver:
 ```
-vncserver :89 -geometry 1920x1200 -depth 24
+sh create_graph.sh
 ```
-
-Input password (password lenght:8)
-
-
-Export display:
-```
-export DISPLAY=:89
-```
-
-Start stability test from ```stability_test_env``` folder.
-
-Unlooped test:
-```
-DISPLAY=:89 sh stability_test.sh
-```
-
-Looped test:
-```
-DISPLAY=:89 sh stability_test_loop.sh
-```
-
 

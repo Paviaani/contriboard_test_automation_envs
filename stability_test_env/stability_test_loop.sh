@@ -45,17 +45,17 @@ while COUNTER=$((COUNTER+1))
 do
 	echo '\nTest loop round '$COUNTER' started:' >> stats/version.txt && date >>  stats/version.txt
 	cd test/robot-framework/ContriboardTesting/
-	pybot RegTestUsers.txt
-	pybot Invalid_Login_Test.txt
-	pybot New_User_Test.txt
-	pybot Old\ User\ Test.txt
+	DISPLAY=:89 pybot RegTestUsers.txt
+	DISPLAY=:89 pybot Invalid_Login_Test.txt
+	DISPLAY=:89 pybot New_User_Test.txt
+	DISPLAY=:89 pybot Old\ User\ Test.txt
 	cd .. && cd ContriboardTestScenarios/
-	pybot RegisterUsers.txt
-	pybot Scenario1.rst
-	pybot Scenario2.rst
-	pybot Scenario3.rst
-	pybot Scenario4.rst
-	pybot Scenario5.rst
+	DISPLAY=:89 pybot RegisterUsers.txt
+	DISPLAY=:89 pybot Scenario1.rst
+	DISPLAY=:89 pybot Scenario2.rst
+	DISPLAY=:89 pybot Scenario3.rst
+	DISPLAY=:89 pybot Scenario4.rst
+	DISPLAY=:89 pybot Scenario5.rst
 	cd .. && cd .. && cd ..
 	echo 'Clear Database:'
 	vagrant ssh -c "${CLEARDB}"

@@ -17,4 +17,4 @@ cd populator && git pull && cd ..
 
 echo '\nStart Contriboard:'
 vagrant ssh -c "${START}"
-echo 'Contriboard running...'
+echo 'Contriboard runnig...'

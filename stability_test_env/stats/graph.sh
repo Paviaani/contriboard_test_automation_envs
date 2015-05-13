@@ -11,5 +11,5 @@ set xlabel "time"
 set ylabel "total-mem-usage"
 plot "stat.txt" using 1:9 title "used" with lines, "stat.txt" using 1:10 title "buff" with lines, "stat.txt" using 1:11 title "cach" with lines,"stat.txt" using 1:12 title "free" with lines 
 set term png size 1920,1080
-set output "stat.png"
+set output "memstats.png"
 replot
