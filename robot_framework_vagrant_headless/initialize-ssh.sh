@@ -7,7 +7,7 @@
 USER=${1-N4SJAMK}
 
 # Clone our repositories.
-git clone git@github.com/N4SJAMK/teamboard-test.git 	test
+git clone git@github.com/$USER/teamboard-test.git 	test
 
 # Set 'upstream' to the original repository.
 (cd test           && git remote add upstream git@github.com/N4SJAMK/teamboard-test.git)
