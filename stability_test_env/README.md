@@ -102,7 +102,7 @@ DISPLAY=:89 sh stability_test_loop.sh
 ```
 
 
-####5. Create graphs from stats
+####5. Create graphs from stats (optional)
 
 From stats folder run create_graph script
 
@@ -110,3 +110,16 @@ From stats folder run create_graph script
 sh create_graph.sh
 ```
 
+####6. Clear Database (optional)
+
+Go inside your vagrant machine
+```
+vagrant ssh
+```
+
+Open contriboard-populator folder use command to clear database.
+(This is done automatically when running ```stability_test.sh``` or ```stability_test_loop.sh```)
+```
+fab clear_database
+```
+More info on Contriboard-populator [here](https://github.com/N4SJAMK/contriboard-populator).
