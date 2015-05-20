@@ -55,6 +55,14 @@ sh start_contriboard.sh
 ####4. Run stability test
 
 
+#####Preconditions
+These test are from Contriboard Testing folder. Before running them check that variables are correct for your Contriboard configuration.
+
+Edit this line from tests resource files to match your Contriboard server url:
+```
+${SERVER} sut-cb.n4sjamk.org
+```
+
 ### Physical Display
 
 Start stability test from ```stability_test_env``` folder.
