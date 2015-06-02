@@ -36,7 +36,7 @@ echo 'MONGODB version at /stats/version.txt\n'
 echo 'Get System info:'
 vagrant ssh -c "${SYSINFO}"
 echo 'System info at /stats/sysinfo.txt\n'
-echo 'Start monitorig:'
+echo 'Start monitoring:'
 vagrant ssh -c "${STATS}"
 echo 'Monitors at /stats/dstat.txt and /stats/process.txt\n'
 
