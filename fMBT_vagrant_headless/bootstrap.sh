@@ -7,7 +7,7 @@ export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 export LANGUAGE="en_US.UTF-8"
 
-# RobotFramework
+# fMBT
 sudo apt-get update
 sudo apt-get install -y firefox
 sudo apt-add-repository -y ppa:antti-kervinen/fmbt-devel; sudo apt-get update; sudo apt-get install -y fmbt*
