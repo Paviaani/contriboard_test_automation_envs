@@ -109,7 +109,6 @@ Looped test:
 DISPLAY=:89 sh stability_test_loop.sh
 ```
 
-
 ####5. Create graphs from stats (optional)
 
 From stats folder run create_graph script
