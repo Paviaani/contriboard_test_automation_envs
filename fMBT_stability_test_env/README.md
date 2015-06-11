@@ -15,7 +15,7 @@ Go to fMBT_stability_test_env folder inside cloned repo.
 cd fMBT_stability_test_env/
 ```
 
-Install robot framework to your local machine.
+Install fMBT to your local machine.
 ```
 sh install_test_depencies.sh
 ```
