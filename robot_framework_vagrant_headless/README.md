@@ -58,7 +58,6 @@ export DISPLAY=:89
 
 Virtual display is ready to use
 
-
 ###Tests
 
 Run tests from ```teamboard-test/robot_framework/ContriboardTesting``` or ```teamboard-test/robot_framework/ContriboardTestScenarios``` folder using ```DISPLAY=:89 pybot testnamehere```
