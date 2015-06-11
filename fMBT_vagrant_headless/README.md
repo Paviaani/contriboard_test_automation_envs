@@ -9,7 +9,7 @@ git clone https://github.com/N4SJAMK/contriboard_test_automation_envs.git
 ```
 
 ####Initialize workspace
-Go to robot_framework_vagrant_headless folder inside cloned repo.
+Go to fMBT_vagrant_headless folder inside cloned repo.
 
 Initialize the workspace by running a initialization commands according you environment:
 
@@ -61,6 +61,8 @@ Virtual display is ready to use
 
 ###Tests
 
-Run tests from ```teamboard-test/robot_framework/ContriboardTesting``` or ```teamboard-test/robot_framework/ContriboardTestScenarios``` folder using ```DISPLAY=:89 pybot testnamehere```
+Before running test check test url is correct for your test enviroment from ``` teamboardtest/fmbt/Contriboard/adapters/seleniumadapter.py ```
+
+Run tests from ```teamboard-test/fmbt/Contriboard``` folder using ```DISPLAY=:89 fmbt test.conf```
 
 More about test [here](https://github.com/N4SJAMK/teamboard-test)
