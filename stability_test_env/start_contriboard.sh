@@ -12,6 +12,8 @@ echo '\nUpdate client-react repository:'
 cd client-react && git pull && cd ..
 echo '\nUpdate populator repository:'
 cd populator && git pull && cd ..
+echo '\Update img repository:'
+cd img && git pull && cd ..
 
 #Start Contriboard
 
