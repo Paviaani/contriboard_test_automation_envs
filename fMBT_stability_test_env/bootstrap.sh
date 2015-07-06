@@ -17,7 +17,7 @@ echo "deb http://repo.mongodb.org/apt/ubuntu "$(lsb_release -sc)"/mongodb-org/3.
 
 apt-get update
 apt-get install -y git nodejs build-essential
-apt-get install -y mongodb-server redis-server
+apt-get install -y mongodb-org redis-server
 
 # Build tools for development
 
