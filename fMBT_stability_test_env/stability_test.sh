@@ -46,11 +46,11 @@ do
 	echo '\nTest loop round '$COUNTER' started:' >> stats/version.txt && date >>  stats/version.txt
 	cd test/fmbt/Contriboard
 	fmbt test.conf
+	cd .. && cd .. && cd ..
 	echo 'Clear Database:'
 	vagrant ssh -c "${CLEARDB}"
 	echo 'Database Cleared.\n'
 	killall firefox
-	cd .. && cd .. && cd ..
 	echo 'Test loop round '$COUNTER' finished:' >> stats/version.txt && date >>  stats/version.txt
 	echo '\nPress [CTRL+C]to stop...'
 	sleep 10
