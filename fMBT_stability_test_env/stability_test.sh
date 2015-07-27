@@ -49,5 +49,5 @@ do
 	killall firefox
 	echo 'Test loop round '$COUNTER' finished:' >> stats/version.txt && date >>  stats/version.txt
 	echo '\nPress [CTRL+C]to stop...'
-	sleep 2
+	sleep 10
 done
